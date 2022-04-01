@@ -1,0 +1,99 @@
+// call() method takes arguments separately. It can be used to call a method with an owner object as a parameter. With call(), an object can use a method belonging to another object.
+
+const person = {
+  fullName: function(city, country) {
+    return this.firstName + " " + this.lastName + "," + city + "," + country;
+  }
+}
+const person1 = {
+  firstName:"John",
+  lastName: "Doe"
+}
+person.fullName.call(person1, "Oslo", "Norway");
+
+
+// apply() method takes arguments as an array.
+
+const person = {
+  fullName: function(city, country) {
+    return this.firstName + " " + this.lastName + "," + city + "," + country;
+  }
+}
+const person1 = {
+  firstName:"John",
+  lastName: "Doe"
+}
+person.fullName.apply(person1, ["Oslo", "Norway"]);
+
+
+// Variables created without a declaration keyword (var, let, or const) are always global, even if they are created inside a function. 
+function myFunction() {
+  a = 4;
+}
+
+
+// A closure is a function having access to the parent scope, even after the parent function has closed.
+
+const add = (function () {
+  let counter = 0;
+  return function () {counter += 1; return counter}
+})();
+
+add();
+add();
+add();
+
+// DOM Traversal
+According to the W3C HTML DOM standard, everything in an HTML document is a node:
+
+The entire document is a document node
+Every HTML element is an element node
+The text inside HTML elements are text nodes
+Every HTML attribute is an attribute node (deprecated)
+All comments are comment nodes
+
+https://www.w3schools.com/js/pic_htmltree.gif
+
+In a node tree, the top node is called the root (or root node)
+Every node has exactly one parent, except the root (which has no parent)
+A node can have a number of children
+Siblings (brothers or sisters) are nodes with the same parent
+
+// select the parent element, by one level upwards
+<ul class="list">
+  <li><a href="#">Link 1</a></li>
+  <li><a href="#">Link 2</a></li>
+  <li><a href="#">Link 3</a></li>
+  <li><a href="#">Link 4</a></li>
+  <li><a href="#">Link 5</a></li>
+</ul>
+
+const firstListItem = document.querySelector('li')
+const list = firstListItem.parentElement
+console.log(list)
+// <ul class="list"> ... </ul>
+
+// children
+const list = document.querySelector('.list')
+const listItems = list.children
+
+console.log(listItems)
+//list al the items
+
+// select the closest element, the closest ancestor element upwards that matches a selector
+const firstLink = document.querySelector('a')
+const firstLinkThroughClosest = firstLink.closest('a')
+console.log(firstLinkThroughClosest)
+// <a href="#">Link 1</a>
+
+//nextelementsibling
+const firstListItem = document.querySelector('li')
+const secondListItem = firstListItem.nextElementSibling
+console.log(secondListItem)
+// <li><a href="#">Link 2</a></li>
+
+//previouselementsibling
+const secondListItem = document.querySelectorAll('li')[1]
+const firstListItem = secondListItem.previousElementSibling
+console.log(firstListItem)
+// <li><a href="#">Link 1</a></li>
