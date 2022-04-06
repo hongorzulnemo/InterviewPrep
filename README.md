@@ -59,7 +59,7 @@ example: orderedZoo = sorted(zoo)
 example: zoo.clear()
 
 
-**Finally keyword**
+####**Finally keyword**
 Python provides a keyword finally, which is **always executed** after try and except blocks. The finally block always executes after normal termination of try block or after try block terminates due to some exception.
 
 **Python code to illustrate**
