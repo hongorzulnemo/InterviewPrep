@@ -1,2 +1,23 @@
-In python:
-The dictionary key must be of a type that is immutable. For example, you can use an integer, float, string, or Boolean as a dictionary key. However, neither a list nor another dictionary can serve as a dictionary key, because lists and dictionaries are mutable.
+## Notes in python3:
+The **dictionary key** must be of a type that is **immutable**. 
+
+Immutable types: 
+- integer, 
+- float, 
+- string,
+- boolean,
+- tuple. 
+Mutable types: 
+- list, 
+- dictionary, 
+- sets.
+
+____________________________________________________________________
+Data Structure    |  List  |  Tuple  |  Set  |  Dictionary          |
+____________________________________________________________________
+Duclicate elements|  yes   |   yes   |  no   |  no(keys)/yes(values)|
+____________________________________________________________________
+Different elements|  yes   |   yes   |  yes  |  yes/yes             |
+____________________________________________________________________
+
+Operations done in list:
