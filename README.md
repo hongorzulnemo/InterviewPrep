@@ -1,4 +1,4 @@
-## Software engineer intern for Morgan Stanley
+## Software engineer intern prep for Morgan Stanley
 
 ### Python3:
 The **dictionary key** must be of a type that is **immutable**. 
@@ -59,4 +59,11 @@ example: orderedZoo = sorted(zoo)
 example: zoo.clear()
 
 
+**Instance Attribute**
+An instance attribute is a Python variable belonging to only one object. It is only accessible in the scope of the object and it is defined inside the constructor function of a class. For example, __init__(self,..).
 
+**Class Attribute**
+A class attribute is a Python Variable that belongs to a class rather than a particular object. This is shared between all other objects of the same class and is defined outside the constructor function __init__(self,…), of the class.
+
+**Differences Between Class and Instance Attributes**
+The difference is that class attributes are shared by all instances. When you change the value of a class attribute, it will affect all instances that share the same exact value. The attribute of an instance on the other hand is unique to that instance.
